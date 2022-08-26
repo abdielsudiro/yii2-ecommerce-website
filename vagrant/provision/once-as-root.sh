@@ -34,9 +34,7 @@ pkg update
 #apt-get upgrade -y
 
 info "Install additional software"
-# apt-get install -y php7.0-curl php7.0-cli php7.0-intl php7.0-mysqlnd php7.0-gd php7.0-fpm php7.0-mbstring php7.0-xml unzip nginx mysql-server-5.7 php.xdebug
-pkg install -y php81-curl php81-cli php81-intl php81-mysqlnd php81-gd php81-fpm php81-mbstring php81-xml unzip nginx mysql80-server-8.0.29 php81-pecl-xdebug-3.1.5
-
+pkg install -y php81 php81-{curl,intl,mysqli,gd,mbstring,xml} nginx unzip mysql80-server php81-pecl-xdebug-3.1.5
 info "Configure startup"
 echo 'nginx_enable="YES"' >> /etc/rc.conf &&
 echo 'mysql_enable="YES"' >> /etc/rc.conf &&
