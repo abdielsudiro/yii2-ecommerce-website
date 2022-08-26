@@ -18,8 +18,8 @@ if required_plugins_installed
 end
 
 domains = {
-  frontend: 'y2aa-frontend.test',
-  backend:  'y2aa-backend.test'
+  frontend: 'ecom-fe.local',
+  backend:  'ecom-be.local'
 }
 
 config = {
@@ -41,7 +41,7 @@ end
 # vagrant configurate
 Vagrant.configure(2) do |config|
   # select the box
-  config.vm.box = 'bento/ubuntu-16.04'
+  config.vm.box = 'generic/freebsd12'
 
   # should we ask about box updates?
   config.vm.box_check_update = options['box_check_update']
